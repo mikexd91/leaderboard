@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+	   	<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel ="stylesheet" href ="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+		<title>Teamie Leaderboard</title>	
+	</head>
+	<body>
+		<nav class = "navbar navbar-default" role ="navigation">
+		   <div class = "container">
+		     <div class = "navbar-header">
+		         <button type="button" class = "navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		         
+		            <span class = "sr-only"> Toggle Navigation </span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		         </button>
+		         <a class="navbar-brand active" href="index.html">Teamie</a>
+	   		 </div>
+	   		 <div class = "navbar-collapse collapse">
+	   		     <ul class="nav navbar-nav navbar-right">
+				 <li><a href="#">Login</a></li>
+	   		 </ul>
+	   		 </div>
+	   		 
+	  		</div>
+		</nav>
+		<div class = "container">
+			<table class="table table-hover sortable" id ="ranklistTable">
+				<thead>
+					<tr></tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<div class ="col-md-6 col-md-offset-3">
+				<canvas id="myChart" width="200" height="200"></canvas>
+			</div>
+    	</div>
+
+    	
+
+    	<footer class="footerContainer"></footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.28.4/js/jquery.tablesorter.js"></script> 
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+		<script type="text/javascript" src="js/data.js"> </script>
+		<script type = "text/javascript" src = "js/script.js"> </script>
+		<script type = "text/javascript" src = "js/common.js"> </script>
+		<script>
+		 function rand_color()
+            {
+                return '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
+            }
+
+var ctx = document.getElementById("myChart");
+// var i = 0;
+var myChart = new Chart(ctx, {
+	type: 'radar',
+    data: {
+        labels: ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5"],
+        responsive:true,
+        datasets: [
+        {
+        	label:students[0].name,
+			backgroundColor: "rgba(153,255,51,0.4)",
+            borderColor: "rgba(153,255,51,0.4)",
+			data : [students[0].ch1, students[0].ch2, students[0].ch3, students[0].ch4, students[0].ch5]
+		},
+		{
+			label:students[1].name,
+			backgroundColor: " rgba(215, 44, 44, 0.4)",
+                borderColor: " rgba(215, 44, 44, 0.4)",
+			data : [students[1].ch1, students[1].ch2, students[1].ch3, students[1].ch4, students[1].ch5]
+		},
+		{
+			label:students[2].name,
+			backgroundColor: " rgba(215, 161, 44, 0.4)",
+                borderColor: " rgba(215, 161, 44, 0.4)",
+			data : [students[2].ch1, students[2].ch2, students[2].ch3, students[2].ch4, students[2].ch5]
+		},
+		{
+			label:students[3].name,
+			backgroundColor: " rgba(255, 75, 159, 0.4)",
+                borderColor: " rgba(255, 75, 159, 0.4)",
+			data : [students[3].ch1, students[3].ch2, students[3].ch3, students[3].ch4, students[3].ch5]
+		},
+		{
+			label:students[4].name,
+			backgroundColor: " rgba(0, 0, 164, 0.4)",
+                borderColor: " rgba(0, 0, 164, 0.4)",
+			data : [students[4].ch1, students[4].ch2, students[4].ch3, students[4].ch4, students[4].ch5]
+		}
+
+      ]
+    },
+    options: {
+    	responsive: true,
+        maintainAspectRatio: true,
+        scale: {
+            ticks: {
+                beginAtZero: true,
+                max: 5,
+                stepSize: 1
+            }
+        }
+        
+    }
+});
+
+</script>
+	</body>
+</html>

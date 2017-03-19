@@ -1,0 +1,95 @@
+* {
+   font-family: 'Roboto', sans-serif;
+}
+
+table {
+	width: 100%;
+}
+
+td,th {
+	text-align:center;
+	padding: 10px;	
+}
+
+th {
+	background-color: #FF5252;
+	color: white;
+}
+
+.sortable thead {
+	cursor: pointer;
+	background: #FF5252;
+}
+
+.sortable thead tr th.tablesorter-headerAsc, .sortable thead tr th.tablesorter-headerDesc {
+  background: #FF8A80;
+  border-color: transparent;
+  color: black;
+}
+
+.table-hover tbody tr:hover td {
+    background-color: #FF8A80;
+}
+
+.navbar-default {
+	 background-color: #FF5252;
+	 color: white;
+	 font-weight: bold;
+	 font-size: 15px;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: Gold;
+}
+.navbar-default .navbar-text {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: Gold;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: Gold;
+  background-color: #FF5252;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: Gold;
+  background-color: #FF5252;
+}
+
+.goldRow {
+  background-color: #ffe34c;
+}
+
+.silverRow {
+  background-color: rgba(188, 186, 177, 0.5);;
+}
+
+.bronzeRow {
+  background-color:  rgba(215, 161, 44, 0.5);;
+}
+
+
+@media screen and (max-width:499px){
+  .unused{
+    display:none;
+  }
+}
+
+@media screen and (max-width:310px){
+  .unusedImage{
+    display:none;
+  }
+}
